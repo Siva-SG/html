@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form and Table Validation</title>
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+<link href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css">  
+<style>
+    .error {
+        color: red;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Form</h2>
+<form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone"><br><br>
+    <button type="button" id="submitBtn">Submit</button>
+</form>
+<div id="demo_info" class="box"></div>
+<h2>Table</h2>
+<table id="dataTable_table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"
+></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+<script>
+function eventFired(type) {
+    let n = document.querySelector('#demo_info');
+    n.innerHTML +=
+        '<div>' + type + ' event - ' + new Date().getTime() + '</div>';
+    n.scrollTop = n.scrollHeight;
+}
+ 
+new DataTable('#dataTable_table')
+    .on('order.dt', () => eventFired('Order'))
+    .on('search.dt', () => eventFired('Search'))
+    .on('page.dt', () => eventFired('Page'));
+    </script>
+<script>
+    $(document).ready(function() {
+        $('#submitBtn').click(function() {
+            var name = $('#name').val().trim();
+            var email = $('#email').val().trim();
+            var phone = $('#phone').val().trim();
+
+            var isValid = true;
+
+            // Validate each input field
+            if (name === "") {
+                showError($('#name'), "Name is required");
+                isValid = false;
+            } else {
+                hideError($('#name'));
+            }
+
+            if (email === "") {
+                showError($('#email'), "Email is required");
+                isValid = false;
+            } else {
+                hideError($('#email'));
+            }
+
+            if (phone === "") {
+                showError($('#phone'), "Phone is required");
+                isValid = false;
+            } else {
+                hideError($('#phone'));
+            }
+
+            if (isValid) {
+                addDataToTable(name, email, phone);
+                clearForm();
+            }
+        });
+
+        $(document).on('click', '.deleteBtn', function() {
+            $(this).closest('tr').remove();
+        });
+    });
+
+    function showError(input, errorMessage) {
+        input.addClass('error');
+        input.next('.error-message').text(errorMessage);
+    }
+
+    function hideError(input) {
+        input.removeClass('error');
+        input.next('.error-message').text('');
+    }
+
+    function addDataToTable(name, email, phone) {
+        var newRow = '<tr>' +
+                        '<td>' + name + '</td>' +
+                        '<td>' + email + '</td>' +
+                        '<td>' + phone + '</td>' +
+                        '<td><button class="deleteBtn">Delete</button></td>' +
+                    '</tr>';
+        $('#dataTable_table tbody').append(newRow);
+    }
+
+    function clearForm() {
+        $('#myForm')[0].reset();
+    }
+    let table = new DataTable('#dataTable_table');
+
+</script>
+
+</body>
+</html>

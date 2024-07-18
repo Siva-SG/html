@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <title>Form Validation 3</title>
+    <script src="formvalid.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="myForm" class="was-validated">
+            <div class="row">
+            <div class="col-lg-6">
+                <label for="browsers" class="form-label">COMPANY NAME :</label>
+                <input class="form-control" list="browsers" name="browser" id="browser1" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers">
+                    <option value="Google">
+                    <option value="Microsoft">
+                    <option value="Amazon">
+                    <option value="Paypal">
+                    <option value="Zoho">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers2" class="form-label">CITY :</label>
+                <input class="form-control" list="browsers2" name="browser" id="browser2" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers2">
+                    <option value="Chennai">
+                    <option value="Banlgoure">
+                    <option value="Mumbai">
+                    <option value="Malsaiya">
+                    <option value="Others">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers3" class="form-label">TECHNICAL SKILLS :</label>
+                <input class="form-control" list="browsers3" name="browser" id="browser3" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers3">
+                    <option value="Problem Solving">
+                    <option value="Frontend Developer">
+                    <option value="Backend Developer">
+                    <option value="Database system">
+                    <option value="Desginer">
+                    <option value="Cloud Computing">
+                    <option value="AR/VR">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers4" class="form-label">NON TECHNICAL SKILLS :</label>
+                <input class="form-control" list="browsers4" name="browser" id="browser4" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers4">
+                    <option value="Puzzal Solving">
+                    <option value="Drawing">
+                    <option value="Team Playing">
+                    <option value="Writing">
+                    <option value="Editing">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="name" class="form-label">PROJECT/INTERNSHIP NAME :</label>
+                <input type="text" id="name"  class="form-control" style="width: 100%;" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="col-lg-6 mt-3">
+            <label for="name" class="form-label">RESUME UPLOAD:</label>
+            <input type="file" id="myFile" name="filename" required>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="col-12" style="display: block;">
+            <label for="ADDRESS">COMMENTS :</label>
+            <textarea class="form-control" rows="5" id="ADDRESS" name="text" required></textarea>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+    </div>
+</form>
+        <button onclick="document.location='formvalid22.html'" type="button" class="btn1 btn-primary mt-3">Previous</button>
+        <a href="#" onclick="pushData()" type="submit" class="btn2 btn-primary mt-3">Confirm</a>
+    </div>
+
+    <p id="pt"></p>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    var myarr = ["A","B","C"];
+
+    var hello = console.log("hello");
+
+    function pushData(){
+        var it1 = document.getElementById("browser1").value;
+        var it2 = document.getElementById("browser2").value;
+        var it3 = document.getElementById("browser3").value;
+        var it4 = document.getElementById("browser4").value;
+        myarr.push(it1);
+        myarr.push(it2);
+        myarr.push(it3);
+        myarr.push(it4);
+
+        var pval=" ";
+
+        for(i=0; i<myarr.length; i++){
+            pval = pval+myarr[i]; 
+        }
+        document.getElementById("pt").innerHTML = pval;
+    }
+</script>
+</html>

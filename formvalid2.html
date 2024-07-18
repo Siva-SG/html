@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <title>Form Validation</title>
+</head>
+<style>
+    #myform{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div class="heading text-center">
+    <h1>STUDENT'S FORM</h1>
+</div>
+    <div class="container mt-5">
+    <form id="myForm" class="was-validated">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="name" class="form-label">FIRST NAME :</label>
+                <input type="text" id="name"  class="form-control" style="width: 100%;" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="col-lg-6">
+                <label for="name" class="form-label">LAST NAME :</label>
+                <input type="text" id="name2"  class="form-control" style="width: 100%;" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="col-lg-6 mt-3" style="display: flex;">
+                <label>
+                    GENDER:
+                  </label>
+                <div class="col-lg-3" style="padding-left: 45px;">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        MALE
+                      </label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="gender" required>
+                </div>
+                <div class="col-lg-3" style="padding-left: 15px;">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        FEMALE
+                      </label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="gender" required>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-3">
+                <div class="bootstrap-iso">
+                <label class="control-label" for="date">DOB :</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            </div>
+            <div class="col-12" style="display: block;">
+                <label for="ADDRESS">ADDRESS :</label>
+                <textarea class="form-control" rows="5" id="ADDRESS" name="text" required></textarea>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="col-12 mt-3" style="display: flex;">
+            <div class="col-lg-6">
+                <label for="number" class="form-label">PHONE NO :</label>
+                <input type="number" id="number"  class="form-control" style="width: 100%;" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="col-lg-6" style="padding-left: 30px;">
+                <label for="number" class="form-label">PARENTS NO :</label>
+                <input type="number" id="number2"  class="form-control" style="width: 100%;" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+        </div>
+        </div>
+        <!-- <a href="formvalid22.html" type="submit" class="btn btn-primary mt-3">Next</a> -->
+     <a href="formvalid24.html">  <button onclick="nameget()" > next</button> </a>
+</form>
+</div>
+   </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script src="formvalid.js"></script>
+
+</html>

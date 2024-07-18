@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <title>Form Validation2</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="myForm" class="was-validated">
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="name" class="form-label">SCHOOL NAME :</label>
+                    <input type="text" id="name"  class="form-control" style="width: 100%;" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="browsers" class="form-label">DISTRICT :</label>
+                    <input class="form-control" list="browsers" name="browser" id="browser" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <datalist id="browsers">
+                        <option value="Tirunelveli">
+                        <option value="Madurai">
+                        <option value="Kanyakumari">
+                        <option value="Tenkasi">
+                        <option value="Turicorn">
+                    </datalist>
+                </div>
+                <div class="col-12 mt-3" style="display: flex;">
+                    <div class="col-lg-6">
+                        <label for="number" class="form-label">SSLC(Percentage) :</label>
+                        <input type="number" id="number1"  class="form-control" style="width: 100%;" required>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="col-lg-6" style="padding-left: 25px;">
+                        <label for="number" class="form-label">HLC(Percentage) :</label>
+                        <input type="number" id="number2"  class="form-control" style="width: 100%;" required>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt">
+                    <label for="name" class="form-label">COLLEGE NAME :</label>
+                    <input type="text" id="name2"  class="form-control" style="width: 100%;" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="browsers" class="form-label">DISTRICT :</label>
+                    <input class="form-control" list="browsers" name="browser" id="browser2" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <datalist id="browsers">
+                        <option value="Tirunelveli">
+                        <option value="Madurai">
+                        <option value="Kanyakumari">
+                        <option value="Tenkasi">
+                        <option value="Turicorn">
+                    </datalist>
+                </div>
+                <div class="col-lg-6">
+                    <label for="browsers2" class="form-label">DEGREE :</label>
+                    <input class="form-control" list="browsers2" name="browser" id="browser3" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <datalist id="browsers2">
+                        <option value="BE">
+                        <option value="ME">
+                        <option value="BSC">
+                        <option value="MSC">
+                        <option value="BEd">
+                        <option value="MEd">
+                        <option value="MBA">
+                    </datalist>
+                </div>
+                <div class="col-lg-6">
+                    <label for="browsers3" class="form-label">DEPARTMENT :</label>
+                    <input class="form-control" list="browsers3" name="browser" id="browser4" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <datalist id="browsers3">
+                        <option value="CSE/IT">
+                        <option value="ECE/EEE">
+                        <option value="MECH/CIVL">
+                        <option value="MBA">
+                        <option value="ARICULTURE">
+                    </datalist>
+                </div>
+                 <div class="col-lg-6" style="padding-left: 25px;">
+                        <label for="number" class="form-label">Last year(CGPA) :</label>
+                        <input type="number" id="number3"  class="form-control" style="width: 100%;" required>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                <div class="col-lg-6">
+                    <label for="browsers4" class="form-label">YEAR OF PASSING :</label>
+                    <input class="form-control" list="browsers4" name="browser" id="browser5" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    <datalist id="browsers4">
+                        <option value="2021">
+                        <option value="2022">
+                        <option value="2023">
+                        <option value="2024">
+                        <option value="2025">
+                    </datalist>
+                </div>
+            </div>
+        </form>
+        <button onclick="document.location='formvalid2.html'" type="button" class="btn1 btn-primary mt-3">Previous</button>
+        <button onclick="document.location='formvalid23.html'" type="submit" class="btn2 btn-primary mt-3">Next</button>
+    </div>
+
+    <div class="container mt-5">
+        <form id="myForm" class="was-validated">
+            <div class="row">
+            <div class="col-lg-6">
+                <label for="browsers" class="form-label">COMPANY NAME :</label>
+                <input class="form-control" list="browsers" name="browser" id="browser1" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers">
+                    <option value="Google">
+                    <option value="Microsoft">
+                    <option value="Amazon">
+                    <option value="Paypal">
+                    <option value="Zoho">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers2" class="form-label">CITY :</label>
+                <input class="form-control" list="browsers2" name="browser" id="browser2" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers2">
+                    <option value="Chennai">
+                    <option value="Banlgoure">
+                    <option value="Mumbai">
+                    <option value="Malsaiya">
+                    <option value="Others">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers3" class="form-label">TECHNICAL SKILLS :</label>
+                <input class="form-control" list="browsers3" name="browser" id="browser3" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers3">
+                    <option value="Problem Solving">
+                    <option value="Frontend Developer">
+                    <option value="Backend Developer">
+                    <option value="Database system">
+                    <option value="Desginer">
+                    <option value="Cloud Computing">
+                    <option value="AR/VR">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers4" class="form-label">NON TECHNICAL SKILLS :</label>
+                <input class="form-control" list="browsers4" name="browser" id="browser4" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <datalist id="browsers4">
+                    <option value="Puzzal Solving">
+                    <option value="Drawing">
+                    <option value="Team Playing">
+                    <option value="Writing">
+                    <option value="Editing">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="name" class="form-label">PROJECT/INTERNSHIP NAME :</label>
+                <input type="text" id="name"  class="form-control" style="width: 100%;" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="col-lg-6 mt-3">
+            <label for="name" class="form-label">RESUME UPLOAD:</label>
+            <input type="file" id="myFile" name="filename" required>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="col-12" style="display: block;">
+            <label for="ADDRESS">COMMENTS :</label>
+            <textarea class="form-control" rows="5" id="ADDRESS" name="text" required></textarea>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+    </div>
+</form>
+        <button onclick="document.location='formvalid22.html'" type="button" class="btn1 btn-primary mt-3">Previous</button>
+        <a href="#" onclick="pushData()" type="submit" class="btn2 btn-primary mt-3">Confirm</a>
+    </div>
+</body>
+<script src="formvalid.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

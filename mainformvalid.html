@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Form Validation</title>
+</head>
+<!-- <style>
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+</style> -->
+<body>
+    <!-- <form action="https://api.web3forms.com/submit" method="POST"> -->
+    <div id="shift1">
+    <div class="heading text-center">
+        <h1>STUDENT'S FORM</h1>
+    </div>
+    <div class="container mt-5">
+        <form id="myForm" class="was-validated">
+            <div class="row">
+                <!-- <input type="hidden" name="access_key" value="ae15f52b-aba0-4020-a0dc-7c88c9fbe016"> -->
+
+                <div class="col-lg-6">
+                    <label for="name" class="form-label">FIRST NAME :</label>
+                    <input type="text" id="name"  class="form-control" style="width: 100%;" required>
+                </div>
+                <div class="col-lg-6">
+                    <label for="name" class="form-label">LAST NAME :</label>
+                    <input type="text" id="name2"  class="form-control" style="width: 100%;" required>
+                </div>
+                <div class="col-lg-6 mt-3" style="display: flex;">
+                    <label>
+                        GENDER:
+                      </label>
+                    <div class="col-lg-3" style="padding-left: 45px;">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            MALE
+                          </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="gender" required>
+                    </div>
+                    <div class="col-lg-3" style="padding-left: 15px;">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            FEMALE
+                          </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="gender" required>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <label class="control-label" for="date">DOB :</label>
+                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date" required>
+                </div>
+                </div>
+                <div class="col-12" style="display: block;">
+                    <label for="ADDRESS">ADDRESS :</label>
+                    <textarea class="form-control" rows="5" id="ADDRESS" name="text" required></textarea>
+                </div>
+                <div class="col-12 mt-3" style="display: flex;">
+                <div class="col-lg-6">
+                    <label for="number" class="form-label">PHONE NO :</label>
+                    <input type="number" id="number"  class="form-control" style="width: 100%;" required>
+                </div>
+                <div class="col-lg-6" style="padding-left: 30px;">
+                    <label for="number" class="form-label">PARENTS NO :</label>
+                    <input type="number" id="number2"  class="form-control" style="width: 100%;" required>
+                </div>
+            </div>
+            </div>
+        
+    </form>
+            <!-- <a href="formvalid22.html" type="submit" class="btn btn-primary mt-3">Next</a> -->
+         <button onCLick=" myfunction();" class="nxt" id="nxt">Next</button>
+        </div>
+</div> 
+        <div id="shift2">
+        <div class="container mt-5">
+            <form id="myForm" class="was-validated">
+         <div class="row">
+            <div class="col-lg-6">
+                <label for="name" class="form-label">SCHOOL NAME :</label>
+                <input type="text" id="sclname"  class="form-control" style="width: 100%;" required>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers" class="form-label">DISTRICT :</label>
+                <input class="form-control" list="browsers" name="browser" id="browser" required>
+                <datalist id="browsers">
+                    <option value="Tirunelveli">
+                    <option value="Madurai">
+                    <option value="Kanyakumari">
+                    <option value="Tenkasi">
+                    <option value="Turicorn">
+                </datalist>
+            </div>
+            <div class="col-12 mt-3" style="display: flex;">
+                <div class="col-lg-6">
+                    <label for="number" class="form-label">SSLC(Percentage) :</label>
+                    <input type="number" id="number1"  class="form-control" style="width: 100%;" required>
+                </div>
+                <div class="col-lg-6" style="padding-left: 25px;">
+                    <label for="number" class="form-label">HLC(Percentage) :</label>
+                    <input type="number" id="number22"  class="form-control" style="width: 100%;" required>
+                </div>
+            </div>
+            <div class="col-lg-6 mt">
+                <label for="name" class="form-label">COLLEGE NAME :</label>
+                <input type="text" id="clgname"  class="form-control" style="width: 100%;" required>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers" class="form-label">DISTRICT :</label>
+                <input class="form-control" list="browsers" name="browser" id="browser2" required>
+                <datalist id="browsers">
+                    <option value="Tirunelveli">
+                    <option value="Madurai">
+                    <option value="Kanyakumari">
+                    <option value="Tenkasi">
+                    <option value="Turicorn">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers2" class="form-label">DEGREE :</label>
+                <input class="form-control" list="browsers2" name="browser" id="browser3" required>
+                <datalist id="browsers2">
+                    <option value="BE">
+                    <option value="ME">
+                    <option value="BSC">
+                    <option value="MSC">
+                    <option value="BEd">
+                    <option value="MEd">
+                    <option value="MBA">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers3" class="form-label">DEPARTMENT :</label>
+                <input class="form-control" list="browsers3" name="browser" id="browser4" required>
+                <datalist id="browsers3">
+                    <option value="CSE/IT">
+                    <option value="ECE/EEE">
+                    <option value="MECH/CIVL">
+                    <option value="MBA">
+                    <option value="ARICULTURE">
+                </datalist>
+            </div>
+             <div class="col-lg-6" style="padding-left: 25px;">
+                    <label for="number" class="form-label">Last year(CGPA) :</label>
+                    <input type="number" id="cgpa"  class="form-control" style="width: 100%;" required>
+                </div>
+            <div class="col-lg-6">
+                <label for="browsers4" class="form-label">YEAR OF PASSING :</label>
+                <input class="form-control" list="browsers4" name="browser" id="browser5" required>
+                <datalist id="browsers4">
+                    <option value="2021">
+                    <option value="2022">
+                    <option value="2023">
+                    <option value="2024">
+                    <option value="2025">
+                </datalist>
+            </div>
+        </div>
+    </div>
+    <button onclick="myfunction()" type="button" id="previous" class="btn1 btn-primary mt-3">Previous</button>
+    <button onclick="myfunction2()" type="button" id="nxt2" class="btn2 btn-primary mt-3">Next</button>
+    </form>
+</div>
+
+    <div id="shift3">
+    <div class="container mt-5">
+        <form id="myForm" class="was-validated">
+            <div class="row">
+            <div class="col-lg-6">
+                <label for="browsers" class="form-label">COMPANY NAME :</label>
+                <input class="form-control" list="browsers" name="browser" id="companyname" required>
+                <datalist id="browsers">
+                    <option value="Google">
+                    <option value="Microsoft">
+                    <option value="Amazon">
+                    <option value="Paypal">
+                    <option value="Zoho">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers2" class="form-label">CITY :</label>
+                <input class="form-control" list="browsers2" name="browser" id="city" required>
+                <datalist id="browsers2">
+                    <option value="Chennai">
+                    <option value="Banlgoure">
+                    <option value="Mumbai">
+                    <option value="Malsaiya">
+                    <option value="Others">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers3" class="form-label">TECHNICAL SKILLS :</label>
+                <input class="form-control" list="browsers3" name="browser" id="tskill" required>
+                <datalist id="browsers3">
+                    <option value="Problem Solving">
+                    <option value="Frontend Developer">
+                    <option value="Backend Developer">
+                    <option value="Database system">
+                    <option value="Desginer">
+                    <option value="Cloud Computing">
+                    <option value="AR/VR">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="browsers4" class="form-label">NON TECHNICAL SKILLS :</label>
+                <input class="form-control" list="browsers4" name="browser" id="ntskill" required>
+                <datalist id="browsers4">
+                    <option value="Puzzal Solving">
+                    <option value="Drawing">
+                    <option value="Team Playing">
+                    <option value="Writing">
+                    <option value="Editing">
+                </datalist>
+            </div>
+            <div class="col-lg-6">
+                <label for="name" class="form-label">PROJECT/INTERNSHIP NAME :</label>
+                <input type="text" id="pname"  class="form-control" style="width: 100%;" required>
+            </div>
+            <div class="col-lg-6 mt-3">
+            <label for="name" class="form-label">RESUME UPLOAD:</label>
+            <input type="file" id="myFile" name="filename" required>
+        </div>
+        <div class="col-12" style="display: block;">
+            <label for="ADDRESS">COMMENTS :</label>
+            <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+        </div>
+    </div>
+</form>
+        <button onclick="myfunction2()" id="previous2" type="button" class="btn1 btn-primary mt-3">Previous</button>
+        <button onclick="sendemail()" id="confirm" type="submit" class="btn1 btn-primary mt-3">Confirm</button>
+        <!-- <div class="popup" id="popup" style="width: 400px; background: #fff; border-radius: 6px; position: absolute; top: 0; left: 50%; transform: translate(-50%,-50%) scale(0.1);visibility: hidden; text-align: center; padding: 0 30px 30px; color: #333; transition: transform 0.4s, top 0.4s;">
+            <h2 style="font-size: 38px; font-weight: 500; margin: 30px 0 10px;">Thank you</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button type="button" style="width: 100%; margin-top: 50px; padding: 10px 0;background: #6fd649; color: #fff; border: 0; outline: none; font-size: 18px; border-radius: 4px; cursor: pointer; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);"onclick="closePopup()">Ok</button>
+        </div> -->
+    </div>
+</div>
+</form>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    var x = document.getElementById("shift1");
+    var y = document.getElementById("shift2");
+    var z = document.getElementById("shift3");
+    var nxtbtn = document.getElementById("nxt");
+    var previous = document.getElementById("previous");
+    var nxtbtn2 = document.getElementById("nxt2");
+    var previous2 = document.getElementById("previous2");
+    var confirm = document.getElementById("confirm");
+
+var name1 = document.getElementById("name");
+var fullNameValue = fullName.value.trim();
+var name2;
+var Gender;
+var date;
+var ADDRESS;
+var number;
+var number2;
+var sclname;
+var browser;
+var number1;
+var number22;
+var clgname;
+var browser2;
+var browser3;
+var browser4;
+var cgpa;
+var browser5;
+var companyname;
+var city;
+var tskill;
+var ntskill;
+var pname;
+var myFile;
+var comment;
+ function nameget(){
+    name1 = document.getElementById("name").value;
+    name2 = document.getElementById("name2").value;
+    Gender = document.getElementById("gender").value;
+    date = document.getElementById("date").value;
+    ADDRESS = document.getElementById("ADDRESS").value;
+    number = document.getElementById("number").value;
+    number2 = document.getElementById("number2").value;
+    sclname = document.getElementById("sclname").value;
+    browser = document.getElementById("browser").value;
+    number1 = document.getElementById("number1").value;
+    number22 = document.getElementById("number22").value;
+    clgname = document.getElementById("clgname").value;
+    browser2 = document.getElementById("browser2").value;
+    browser3 = document.getElementById("browser3").value;
+    browser4 = document.getElementById("browser4").value;
+    cgpa = document.getElementById("cgpa").value;
+    browser5 = document.getElementById("browser5").value;
+    companyname = document.getElementById("companyname").value;
+    city = document.getElementById("city").value;
+    tskill = document.getElementById("tskill").value;
+    ntskill = document.getElementById("ntskill").value;
+    pname = document.getElementById("pname").value;
+    myFile = document.getElementById("myFile").value;
+    comment = document.getElementById("comment").value;
+    console.log(name1);
+ }
+
+    function myfunction(){
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+
+    nxtbtn.style.display = "block"
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+    z.style.display = "none";
+
+    nxtbtn.style.display = "block"
+  }
+}
+function myfunction2(){
+  if (y.style.display === "none") {
+    x.style.display = "none";
+    y.style.display = "block";
+    z.style.display = "none";
+
+    nxtbtn.style.display = "none";
+    nxtbtn2.style.display = "block";
+    previous.style.display = "block";
+  } else {
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+
+    nxtbtn.style.display = "none";
+    nxtbtn2.style.display = "block";
+    previous.style.display = "block";
+  }
+}
+function myfunction3(){
+  if (z.style.display === "none") {
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+
+    nxtbtn.style.display = "none"
+    confirm.style.display = "block"
+    previous2.style.display = "block"
+  } else {
+    x.style.display = "block";
+    y.style.display = "block";
+    z.style.display = "none";
+
+    nxtbtn.style.display = "none"
+    confirm.style.display = "block"
+    previous2.style.display = "block"
+  }
+}
+function myfunction4(){
+    if(x.style.display === "none") {
+        x.style.display = "block";
+        y.style.display = "block";
+        z.style.display = "block";
+
+        nxtbtn.style.display = "none"
+        nxtbtn2.style.display = "none"
+        previous.style.display = "none"
+    }
+    else{
+        x.style.display = "none"
+        y.style.display = "none"
+        z.style.display = "none"
+
+        nxtbtn.style.display = "none"
+        nxtbtn2.style.display = "none"
+        previous.style.display = "none"
+    }
+}
+
+// let popup = document.getElementById("popup");
+// function openPopup(){
+//     popup.classList.add("open-popup")
+// }
+// function closePopup(){
+//     popup.classList.remove("open-popup")
+// }
+
+
+    function sendemail() {
+      var userid = "0gxvqC7HwnZ_lswW0"
+      emailjs.init(userid);
+      var name = document.getElementById('name').value;
+      var date = document.getElementById('date').value;
+      var ADDRESS = document.getElementById('ADDRESS').value;
+      var validmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+      if (name == "") {
+        alert("Please Enter Name");
+      }
+      else if (date == "" || date.match(!validmail)) {
+        alert("Please Enter Valid Email");
+      }
+
+      else if (ADDRESS == "") {
+        alert("Please Enter Message");
+      }
+      else {
+        var contactdetail = {
+          from_name: name,
+          from_email: date,
+          message: ADDRESS
+        };
+
+        emailjs.send('service_61g419w', 'template_1573pgh', contactdetail).then(function (res) {
+          alert("FormValidation Sent your email Successfully");
+        },
+          reason => {
+            alert("Error Occur");
+          })
+      }
+    }
+</script>
+</html>

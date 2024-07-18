@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form id="formTest" method="post">
+    <input id="v1" name="v1" type="text" value="siva">
+    <input name="v2" type="text" value="ganapathy">
+    <input id="testPost" type="button" value="Test Post">
+  </form>
+  
+  <hr>
+  
+  <p style="font-weight: bold;">Sends data to a test POST-receiver.</p>
+  
+  <p id="out"></p>
+  
+  <div id="outResponse">
+  </div>
+  
+  
+  <a href="http://127.0.0.1:5500/apieg.html" target="_blank">View post data</a>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(function() {
+  
+    $("#testPost").click(function () {
+
+      var u = new URL('http://127.0.0.1:5500/apieg.html');
+   
+      $("#out").text(u);
+  
+      $.post({
+         url: u,
+         data: $('#formTest').serialize(),
+         success: function(response) {
+            $('#outResponse').text(response);
+         }
+      });
+  
+    });
+    
+  });
+</script>
+</html>

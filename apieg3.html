@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>API</title>
+</head>
+<body>
+    <div class="container" id="mydata">
+      <h1 class="h1 text-center">API</h1>
+        <table class="table" id="dataTable">
+          <thead>
+            <tr>
+              <th>INDEX</th>
+              <th>VALUE</th>
+            </tr>
+          </thead>
+          <tbody id="data">
+            <td></td>
+            <td></td>
+          </tbody>
+        </table>
+        <div id="data2"></div>
+      </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+    var tash = (mydata);
+            // console.log(tash);
+            $.ajax({
+                url: 'https://www.reddit.com/r/javascript/top/.json?limit=5' +tash,
+                type: "GET",
+                success: function(data) {
+                  console.log(data)
+                  console.log(data.data.children.length)
+                  var xdata = data.data.children;
+                  console.table(xdata)
+
+                  
+                  for(var i=0 ; i<xdata.length ; i++){
+                    // document.getElementById('data2').innerHTML += xdata[i].data.archived;
+                    for(let x in xdata[i].data){
+                    
+                      // console.log(x)
+                      z = `${x}:`
+                      h = `${xdata[i].data[x]}`
+                      // document.getElementById('data').innerHTML += z;
+                      // document.getElementById('data').innerHTML += h;
+                      console.log(z)
+                      console.log(h)
+                      $('#dataTable tbody').append('<tr><td>' + z + '</td><td>' + h + '</td></tr>');
+
+                    }
+                  }
+        }
+    })
+})
+</script>
+</html>

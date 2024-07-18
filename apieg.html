@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Author: </h1>
+   <div id="mydata"></div>
+
+   <div id="demo">
+    <table>
+        <tr>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+   </div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+// fetch('https://www.reddit.com/r/javascript/top/.json?limit=5')
+// .then((res)=>res.json())
+// // .then((msg)=>console.log(msg[0].width,msg[0].height))
+// .then(`$('#mydata').val(json.data.children[3].data.subreddit)`)
+// .then(json=>console.log(json.data.children[3].data.subreddit))
+// console.log(res)
+
+$(document).ready(function () {
+    var tash = (mydata);
+            console.log(tash);
+            $.ajax({
+                url: 'https://www.reddit.com/r/javascript/top/.json?limit=5' +tash,
+                type: "GET",
+                success: function(data) {
+                    console.log(data);
+                    document.getElementById("mydata").innerHTML = data;
+                    var author = (data.data.children[2].data)
+                    console.log(author)
+                    for(let i=0; i<author.length; i++){
+                        author += author[i];
+                    }
+                    document.getElementById("demo").innerHTML = author;
+                    
+                    // document.getElementById("mydata").innerHTML = author;
+                }
+            });
+})
+</script>

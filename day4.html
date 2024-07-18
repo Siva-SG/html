@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div style="background-color: rgb(196, 159, 255);">
+    <div class="container text-center">
+    <!--Task-01-->
+    <h1>Task-01</h1>
+    <input id="inputbox">
+    <button onclick="update()">Enter</button>
+    <p id="result"></p>
+    <!--Task-1(Complete)--><br><br>
+
+
+    <!--Task-02-->
+    <h1>Task-02</h1>
+    <input id="inputbox1">
+    <input id="inputbox2">
+    <button onclick="update2()">Enter</button>
+    <p id="result2"></p>
+    <!--Task-2(Complete)--><br><br>
+
+
+
+     <!--Task-03-->
+     <h1>Task-03</h1>
+     <form>
+    <div class="form" style="padding: 15px; font-weight: bold;">
+     <label>Name :</label>
+     <input type="text" id="inputbox3" placeholder="Enter name"><br>
+     <label style="margin-top: 15px;">Age :</label>
+     <input type="number" id="inputbox4" placeholder="Enter Age"><br>
+     <label for="Employee" style="margin-top: 15px;">Employee :</label>
+     <input type="radio" name="Employee" id="inputbox5" value="Job">Job
+     <input type="radio" name="Employee" id="inputbox6" value="Jobless">Jobless
+     <p id="jobname">Job Name: 
+        <input type="text">
+     </p><br>
+     <label for="Marriedstatus" style="margin-top: 15px;">Married :</label>
+     <input type="radio" name="Marriedstatus" id="inputbox7" value="Married">Married
+     <input type="radio" name="Marriedstatus" id="inputbox8" value="Unmarried">Unmarried
+     <p id="Children" for="Children2">Children: 
+        <input type="radio" name="Children2" id="inputbox9" value="Yes">Yes
+        <input type="radio" name="Children2" id="inputbox10" value="No">No
+        <p id="Children2">How many Children? : 
+            <input type="number">
+         </p>
+     </p>
+    </div>
+    </form>
+
+     <!--Task-3(Complete)-->
+    </div>
+</div>
+<script>
+    /*Task-01*/
+    var inputbox=document.getElementById("inputbox")
+    var result=document.getElementById("result")
+
+    function update(){
+        result.textContent=inputbox.value
+    }
+    /*<!--Task-1(Complete)*/
+
+
+/*Task-02*/
+function update2(){
+    var inputbox1=parseInt(document.getElementById("inputbox1").value)
+    var inputbox2=parseInt(document.getElementById("inputbox2").value)
+    var total=inputbox1+inputbox2;
+    var result2=document.getElementById("result2")
+    
+        result2.innerHTML=total;
+    }
+/*<!--Task-02(Complete)*/
+
+
+/*Task-03*/
+
+    var inputbox5=document.getElementById("inputbox5").value
+    var inputbox6=document.getElementById("inputbox6").value
+    var jobname=document.getElementById("jobname")
+    $("#jobname").hide();
+    inputbox5.textContent=jobname;
+
+     $(document).ready(function(){
+  $("#inputbox6").click(function(){
+    $("#jobname").hide();
+  });
+  $("#inputbox5").click(function(){
+    $("#jobname").show();
+  });
+});
+   
+
+var inputbox7=document.getElementById("inputbox7").value
+    var inputbox8=document.getElementById("inputbox8").value
+    var Children=document.getElementById("Children")
+    $("#Children").hide();
+    inputbox7.textContent=Children;
+
+     $(document).ready(function(){
+  $("#inputbox8").click(function(){
+    $("#Children").hide();
+  });
+  $("#inputbox7").click(function(){
+    $("#Children").show();
+  });
+});
+
+
+var inputbox9=document.getElementById("inputbox9").value
+    var inputbox10=document.getElementById("inputbox10").value
+    var Children2=document.getElementById("Children2")
+    
+    inputbox9.textContent=Children2;
+    $("#Children2").hide();
+     $(document).ready(function(){
+  $("#inputbox10").click(function(){
+    $("#Children2").hide();
+  });
+  $("#inputbox9").click(function(){
+    $("#Children2").show();
+  });
+});
+/*task-03*/
+
+</script>
+
+</body>
+</html>
